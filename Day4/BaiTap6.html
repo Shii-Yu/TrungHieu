@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lại Trung Hiếu - Tự Thực Hành 6</title>
+  </head>
+  <body>
+    <form action="#" method="POST">
+      <table cellpadding="6" cellspacing="0" border="0">
+        <tr>
+          <td colspan="2">
+            <h3>Đăng ký thông tin người sử dụng</h3>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Tên đăng nhập</b></td>
+          <td><input type="text" name="username" size="30" /></td>
+        </tr>
+        <tr>
+          <td><b>Mật khẩu</b></td>
+          <td><input type="password" name="password" size="30" /></td>
+        </tr>
+        <tr>
+          <td><b>Nhập lại mật khẩu</b></td>
+          <td><input type="password" name="re_password" size="30" /></td>
+        </tr>
+        <tr>
+          <td><b>Email</b></td>
+          <td><input type="text" name="email" size="50" /></td>
+        </tr>
+        <tr>
+          <td><b>Giới tính:</b></td>
+          <td>
+            <input type="radio" name="gender" value="nam" checked /> Nam
+            <input type="radio" name="gender" value="nu" /> Nữ
+          </td>
+        </tr>
+        <tr>
+          <td><b>Độ tuổi</b></td>
+          <td>
+            <input type="radio" name="age" value="duoi_13" checked /> Dưới 13
+            tuổi <input type="radio" name="age" value="13_den_17" /> Từ 13 đến
+            17 tuổi <input type="radio" name="age" value="18_den_25" /> Từ 18
+            đến 25 tuổi <input type="radio" name="age" value="tren_25" /> Trên
+            25 tuổi
+          </td>
+        </tr>
+        <tr>
+          <td><b>Sở thích của bạn:</b></td>
+          <td>
+            <input type="checkbox" name="hobby" value="am_nhac" /> Âm nhạc
+            <input type="checkbox" name="hobby" value="game" /> Game
+            <input type="checkbox" name="hobby" value="the_thao" /> Thể thao
+            <input type="checkbox" name="hobby" value="du_lich" /> Du lịch
+          </td>
+        </tr>
+        <tr>
+          <td><b>Nghề nghiệp</b></td>
+          <td>
+            <select name="job">
+              <option value="">Chọn ngành nghề</option>
+              <option value="sinh_vien">Sinh viên</option>
+              <option value="lap_trinh_vien">Lập trình viên</option>
+              <option value="quan_tri_mang">Quản trị mạng</option>
+              <option value="thuong_mai_dien_tu">Thương mại điện tử</option>
+              <option value="khac">Khác</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><b>Mô tả bản thân</b></td>
+          <td>
+            <textarea name="description" rows="5" cols="50">
+Mô tả về bản thân bạn...</textarea
+            >
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Đăng ký" />
+            <input type="reset" value="Làm lại" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

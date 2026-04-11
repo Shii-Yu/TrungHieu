@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đối tượng DOM</title>
+  </head>
+  <body>
+    <script language="javascript">
+      //lấy giá trị của thẻ input có id = "idname"
+      var element = document.getElementById("idname").value;
+      //tương tác với tên của thẻ, hi, div p, ..
+      var element = document.getElementsByTagName("h1");
+      //tương tác với thẻ thông qua thuộc tính class name
+      var element = document.getElementsByClassName("input");
+      //tương tác với thẻ thông qua thuộc tính css selector
+      var element = document.querySelectorAll("div input.website");
+    </script>
+    <h2 id="demo">Xin chào</h2>
+    <button onclick="changeText()">Click</button>
+    <script language="javascript">
+      function changeText() {
+        document.getElementById("demo").innerHTML = "DOM Elemnt đã được thay đổi";
+      }
+    </script>
+  </body>
+</html>

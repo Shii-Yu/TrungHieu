@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2-Lại Trung Hiếu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f0f0f0;
+        padding: 50px;
+      }
+
+      .news-section {
+        background-color: #fff;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .news-header {
+        margin-bottom: 20px;
+      }
+
+      .news-header h2 {
+        font-size: 22px;
+        text-transform: uppercase;
+        color: #333;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .news-header h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: #28a745;
+      }
+
+      .news-content {
+        display: flex;
+        gap: 30px;
+      }
+
+      .news-main {
+        flex: 1;
+      }
+
+      .news-main img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+
+      .news-main h3 {
+        margin: 15px 0;
+        font-size: 20px;
+        color: #333;
+        line-height: 1.4;
+      }
+
+      .date-meta {
+        color: #28a745;
+        font-size: 13px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .news-main p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .news-sidebar {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .sidebar-item {
+        display: flex;
+        gap: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .sidebar-item:last-child {
+        border-bottom: none;
+      }
+
+      .sidebar-item img {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+
+      .sidebar-text h4 {
+        font-size: 15px;
+        color: #333;
+        margin-bottom: 5px;
+        line-height: 1.3;
+      }
+
+      @media (max-width: 768px) {
+        .news-content {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="news-section">
+      <div class="news-header">
+        <h2>Tin tức</h2>
+      </div>
+
+      <div class="news-content">
+        <div class="news-main">
+          <img src="imagine/chephamhoahoc.jpg" alt="Hóa chất" />
+          <h3>Chế phẩm hóa học là gì? Và những điều cần lưu ý khi sử dụng</h3>
+          <div class="date-meta">🕒 06/06/2019</div>
+          <p>
+            NaOH hay còn được gọi dưới cái tên Sodium hydroxide, tên gọi trong
+            hóa học là Natri Hydroxit. Các dạng cấu trúc: xút vảy, xút hạt, xút
+            lỏng....
+          </p>
+        </div>
+
+        <div class="news-sidebar">
+          <div class="sidebar-item">
+            <img src="imagine/phaohoacamtay.jpg" alt="Pháo hoa" />
+            <div class="sidebar-text">
+              <h4>Hóa học đằng sau pháo hoa cầm tay</h4>
+              <div class="date-meta">🕒 05/06/2019</div>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="imagine/xut.jpg" alt="Xút" />
+            <div class="sidebar-text">
+              <h4>Ứng dụng của xút trong công nghiệp - xút chuẩn hàng tốt</h4>
+              <div class="date-meta">🕒 05/06/2019</div>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="imagine/can-co-cac-lo-chua-rieng-biet.jpg" alt="Sodium" />
+            <div class="sidebar-text">
+              <h4>Cung Cấp Hóa chất Sodium hydroxide 99% - Xút Vảy Trung</h4>
+              <div class="date-meta">🕒 05/06/2019</div>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="imagine/dungdichNaOH.jpg" alt="Nguy hiểm" />
+            <div class="sidebar-text">
+              <h4>
+                Những lợi ích và mối nguy hiểm khi sử dụng hóa chất XÚT (NaOH)
+              </h4>
+              <div class="date-meta">🕒 05/06/2019</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

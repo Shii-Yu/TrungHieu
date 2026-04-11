@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1-Lại Trung Hiếu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 40px 20px;
+        background-color: #f9f9f9;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .section-title h2 {
+        font-size: 24px;
+        color: #333;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+      }
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 3px;
+        background-color: #0b8f39;
+      }
+
+      .services-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .service-card {
+        width: 350px;
+        height: 260px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .card-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        transition: background 0.4s ease;
+      }
+
+      .service-card:hover .card-overlay {
+        background: rgba(11, 143, 57, 0.8);
+      }
+
+      .card-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+
+      .card-icon img {
+        width: 50px;
+        height: auto;
+      }
+
+      .card-sub {
+        font-size: 13px;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+      }
+
+      .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding: 0 10px;
+      }
+
+      .card-btn {
+        padding: 8px 30px;
+        border: 1px solid #fff;
+        border-radius: 25px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .card-btn:hover {
+        background: #f5951c;
+        border-color: #f5951c;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="section-title">
+      <h2>Dịch vụ</h2>
+    </div>
+
+    <div class="services-container">
+      <div class="service-card">
+        <img src="imagine/hinh1.jpg" class="card-bg" alt="Vận tải" />
+        <div class="card-overlay">
+          <div class="card-icon">
+            <img src="imagine/hinh1-icon.png" alt="Icon" />
+          </div>
+          <p class="card-sub">DỊCH VỤ</p>
+          <h3 class="card-title">VẬN TẢI NỘI ĐỊA</h3>
+          <a href="#" class="card-btn">CHI TIẾT</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="imagine/hinh2.jpg" class="card-bg" alt="Xuất nhập khẩu" />
+        <div class="card-overlay">
+          <div class="card-icon">
+            <img src="imagine/hinh2-icon.jpg" alt="Icon" />
+          </div>
+          <p class="card-sub">DỊCH VỤ</p>
+          <h3 class="card-title">UỶ THÁC XUẤT NHẬP KHẨU</h3>
+          <a href="#" class="card-btn">CHI TIẾT</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="imagine/hinh-3.jpg" class="card-bg" alt="Lao động" />
+        <div class="card-overlay">
+          <div class="card-icon">
+            <img src="imagine/hinh3-icon.jpg" alt="Icon" />
+          </div>
+          <p class="card-sub">DỊCH VỤ</p>
+          <h3 class="card-title">TƯ VẤN XUẤT KHẨU LAO ĐỘNG</h3>
+          <a href="#" class="card-btn">CHI TIẾT</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

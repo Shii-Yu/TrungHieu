@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài kiểm tra đánh giá học phần</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+      .container {
+        background-color: #e0e0e0;
+        padding: 30px;
+        border-radius: 4px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 550px;
+      }
+      h2 {
+        text-align: center;
+        color: green;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 14;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #bbbbbb;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: #fff;
+      }
+
+      textarea {
+        resize: none;
+        height: 90px;
+      }
+
+      .hint {
+        font-size: 11px;
+        color: #888888;
+        margin-top: 3px;
+        font-style: italic;
+      }
+
+      .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+        display: none;
+      }
+
+      .choice-group {
+        display: flex;
+        gap: 15px;
+        font-size: 14px;
+        align-items: center;
+        margin-top: 5px;
+      }
+
+      .choice-group label {
+        font-weight: normal;
+        cursor: pointer;
+      }
+
+      .btn-submit {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        margin: 25px auto 0;
+        font-weight: bold;
+        font-size: 15px;
+      }
+
+      .btn-submit:hover {
+        background-color: #006400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Đăng ký thành viên</h2>
+
+      <form id="regForm">
+        <div class="form-group">
+          <label>Họ và tên</label>
+          <input type="text" name="name" placeholder="Nhập họ và tên" />
+          <div class="error" id="nameError">Họ tên không được để trống</div>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Nhập email" />
+          <div class="hint">Ví dụ: example@email.com</div>
+          <div class="error" id="emailError">
+            Email không hợp lệ hoặc để trống
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Số điện thoại</label>
+          <input type="text" name="phone" placeholder="Nhập số điện thoại" />
+          <div class="hint">Ví dụ: 0123456789</div>
+          <div class="error" id="phoneError">
+            Số điện thoại không hợp lệ hoặc để trống
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Giới tính</label>
+          <div class="choice-group">
+            <label
+              ><input type="radio" name="gender" value="Nam" checked />
+              Nam</label
+            >
+            <label><input type="radio" name="gender" value="Nữ" /> Nữ</label>
+            <label
+              ><input type="radio" name="gender" value="Khác" /> Khác</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Sở thích</label>
+          <div class="choice-group">
+            <label
+              ><input type="checkbox" name="hobbies" value="Bóng đá" /> Bóng
+              đá</label
+            >
+            <label
+              ><input type="checkbox" name="hobbies" value="Âm nhạc" /> Âm
+              nhạc</label
+            >
+            <label
+              ><input type="checkbox" name="hobbies" value="Du lịch" /> Du
+              lịch</label
+            >
+            <label
+              ><input type="checkbox" name="hobbies" value="Đọc sách" /> Đọc
+              sách</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Mật khẩu</label>
+          <input type="password" name="password" placeholder="Nhập mật khẩu" />
+          <div class="error" id="passwordError">
+            Mật khẩu không được để trống
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Xác nhận mật khẩu</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Xác nhận mật khẩu"
+          />
+          <div class="error" id="confirmPasswordError">
+            Mật khẩu xác nhận không khớp
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Địa chỉ</label>
+          <textarea
+            id="address"
+            name="address"
+            placeholder="Nhập địa chỉ"
+          ></textarea>
+          <div class="error" id="addressError">Địa chỉ không được để trống</div>
+        </div>
+
+        <button type="submit" class="btn-submit">Đăng ký</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("regForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document
+            .getElementById("regForm")
+            .elements["name"].value.trim();
+          const email = document
+            .getElementById("regForm")
+            .elements["email"].value.trim();
+          const phone = document
+            .getElementById("regForm")
+            .elements["phone"].value.trim();
+          const password =
+            document.getElementById("regForm").elements["password"].value;
+          const confirmPassword =
+            document.getElementById("regForm").elements["confirmPassword"]
+              .value;
+          const address = document
+            .getElementById("regForm")
+            .elements["address"].value.trim();
+
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const phonePattern = /^\d{10}$/;
+
+          function checkError(condition, errorId, message) {
+            const errorElement = document.getElementById(errorId);
+            if (condition) {
+              errorElement.innerText = message;
+              errorElement.style.display = "block";
+              isValid = false;
+            } else {
+              errorElement.style.display = "none";
+            }
+          }
+
+          checkError(name === "", "nameError", "Họ tên không được để trống");
+
+          if (email === "") {
+            checkError(true, "emailError", "Email không được để trống");
+          } else if (!emailPattern.test(email)) {
+            checkError(true, "emailError", "Email không đúng định dạng");
+          } else {
+            checkError(false, "emailError", "");
+          }
+
+          checkError(
+            phone === "",
+            "phoneError",
+            "Số điện thoại không được để trống",
+          );
+          if (phone !== "" && !phonePattern.test(phone)) {
+            checkError(true, "phoneError", "Số điện thoại phải có 10 chữ số");
+          } else {
+            checkError(false, "phoneError", "");
+          }
+
+          checkError(
+            password === "",
+            "passwordError",
+            "Mật khẩu không được để trống",
+          );
+
+          if (confirmPassword === "") {
+            checkError(
+              true,
+              "confirmPasswordError",
+              "Xác nhận mật khẩu không được để trống",
+            );
+          } else if (password !== confirmPassword) {
+            checkError(
+              true,
+              "confirmPasswordError",
+              "Mật khẩu xác nhận không khớp",
+            );
+          } else {
+            checkError(false, "confirmPasswordError", "");
+          }
+
+          checkError(
+            address === "",
+            "addressError",
+            "Địa chỉ không được để trống",
+          );
+
+          if (isValid) {
+            alert("Đăng ký thành công!");
+            document.getElementById("regForm").reset();
+          }
+        });
+    </script>
+  </body>
+</html>

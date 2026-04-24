@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edmin Dashboard</title>
+    <link rel="stylesheet" href="laitrunghieu_2374820061.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">Edmin</div>
+      <div class="nav-tools">
+        <div class="search-box">
+          <input type="text" placeholder="Search..." />
+          <button><i class="fa fa-search"></i></button>
+        </div>
+        <div class="nav-right">
+          <span>Dropdown <i class="fa fa-caret-down"></i></span>
+          <span>Support</span>
+          <img src="hinhanh/Oguri ft Yukipng.png" alt="User" class="avatar" />
+        </div>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <nav class="sidebar">
+        <ul class="menu-list">
+          <li class="active"><i class="fa fa-tachometer-alt"></i> Dashboard</li>
+          <li><i class="fa fa-rss"></i> News Feed</li>
+          <li>
+            <i class="fa fa-envelope"></i> Inbox
+            <span class="badge green">11</span>
+          </li>
+          <li>
+            <i class="fa fa-tasks"></i> Tasks <span class="badge red">19</span>
+          </li>
+        </ul>
+        <ul class="menu-list secondary">
+          <li><i class="fa fa-bold"></i> Buttons</li>
+          <li><i class="fa fa-font"></i> Typography</li>
+          <li class="active-item"><i class="fa fa-edit"></i> Forms</li>
+          <li><i class="fa fa-table"></i> Tables</li>
+          <li><i class="fa fa-chart-bar"></i> Charts</li>
+        </ul>
+        <ul class="menu-list">
+          <li>
+            <i class="fa fa-cog"></i> More Pages
+            <i class="fa fa-chevron-down float-right"></i>
+          </li>
+          <li><i class="fa fa-sign-out-alt"></i> Logout</li>
+        </ul>
+      </nav>
+
+      <main class="content">
+        <div class="card">
+          <h3>Forms</h3>
+          <hr />
+
+          <div class="alert warning">
+            Warning! Something fishy here! <span>&times;</span>
+          </div>
+          <div class="alert danger">
+            Oh snap! Whats wrong with you? <span>&times;</span>
+          </div>
+          <div class="alert success">
+            Well done! Now you are listening me 🙂 <span>&times;</span>
+          </div>
+
+          <form class="admin-form">
+            <div class="form-row">
+              <label>Basic Input</label>
+              <div class="input-group">
+                <input type="text" placeholder="Type something here..." />
+                <small>Minimum 5 Characters</small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Disabled Input</label>
+              <input
+                type="text"
+                disabled
+                placeholder="You can't type something here..."
+              />
+            </div>
+
+            <div class="form-row">
+              <label>Prepended Input</label>
+              <div class="addon-group">
+                <span class="addon">#</span>
+                <input type="text" placeholder="prepend" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Appended Input</label>
+              <div class="addon-group">
+                <input type="text" placeholder="5.000" />
+                <span class="addon">$</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Dropdown</label>
+              <select>
+                <option>Select here..</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label>Radiobuttons</label>
+              <div class="options">
+                <label><input type="radio" name="opt" /> Option one</label>
+                <label><input type="radio" name="opt" /> Option two</label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Checkboxes</label>
+              <div class="options">
+                <label><input type="checkbox" /> Option one</label>
+                <label><input type="checkbox" /> Option two</label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Textarea</label>
+              <textarea rows="5"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-submit">Submit Form</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
